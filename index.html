@@ -1,263 +1,88 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a0907">
-  <meta name="description" content="Culto Salgados — mais sabor, mais momentos! Conheça nosso cardápio, tamanhos e estoque.">
-
-  <title>Culto Salgados | Mais sabor, mais momentos!</title>
-
-  <link rel="icon" href="assets/logo.jpeg">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b70">
+  <title>Biblioteca CEPK</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
   <header class="topbar">
-    <a class="brand-mini" href="#inicio">
-      <img src="assets/logo.jpeg" alt="Logo Culto Salgados">
-      <span>CULTO <b>SALGADOS</b></span>
+    <a class="brand" href="#" id="homeLink" aria-label="Página inicial da Biblioteca CEPK">
+      <span class="brand-mark">B</span>
+      <span><strong>Biblioteca CEPK</strong><small>Colégio Estadual Presidente Kennedy</small></span>
     </a>
-
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-
-    <nav class="nav">
-      <a href="#inicio">Início</a>
-      <a href="#cardapio">Nosso cardápio</a>
-      <a href="#tamanhos">Tamanhos e preços</a>
-      <a href="#estoque">Nosso estoque</a>
-      <a class="insta-link" href="https://www.instagram.com/cultosalgados/" target="_blank" rel="noopener">Instagram ↗</a>
-    </nav>
+    <nav><button class="nav-link" id="catalogNav">Catálogo</button><button class="nav-link" id="adminNav">Responsável</button></nav>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-glow"></div>
-
+    <section class="hero" id="homeView">
       <div class="hero-copy">
-        <span class="eyebrow"><i></i> FEITO PARA COMPARTILHAR</span>
-        <h1>Mais sabor,<br><em>mais momentos!</em></h1>
-        <p>Pequenos no tamanho, gigantes no sabor. Conheça as delícias do Culto Salgados.</p>
-        <a class="gold-button" href="#cardapio">Conheça nosso cardápio <span>↓</span></a>
+        <span class="eyebrow">CONHECIMENTO AO SEU ALCANCE</span>
+        <h1>Uma biblioteca de<br><span>novas possibilidades.</span></h1>
+        <p>Explore o acervo da Biblioteca CEPK, descubra novas leituras e consulte a disponibilidade dos livros.</p>
+        <div class="hero-actions"><button class="primary" id="browseBtn">Explorar catálogo</button><button class="secondary" id="heroAdminBtn">Área do responsável</button></div>
       </div>
-
-      <div class="hero-logo">
-        <div class="logo-ring">
-          <img src="assets/logo.jpeg" alt="Culto Salgados — logo">
-        </div>
-        <span class="ring-caption">CROCÂNCIA • SABOR • ALEGRIA</span>
-      </div>
-
-      <div class="hero-bottom">
-        <span>O sabor que reúne todo mundo</span>
-        <span class="scroll-mark">ROLE PARA DESCOBRIR ↓</span>
-      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="book-stack"><div class="book book-a"></div><div class="book book-b"></div><div class="book book-c"></div><div class="book book-d"></div></div><div class="art-caption">Cada livro abre um mundo.</div></div>
     </section>
 
-    <section class="section menu-section" id="cardapio">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">UM CLÁSSICO EM CADA MORDIDA</span>
-          <h2>Nosso <em>cardápio</em></h2>
-        </div>
-        <p>Três delícias irresistíveis, preparadas para deixar qualquer momento mais gostoso.</p>
-      </div>
-
-      <div class="menu-feature">
-        <img src="assets/tres-produtos.jpeg" alt="Mini coxinhas, mini risoles e pastelzinhos do Culto Salgados">
-        <div class="menu-feature-overlay">
-          <span>TRÊS DELÍCIAS, UM SÓ LUGAR!</span>
-          <h3>Qual é o seu favorito?</h3>
-        </div>
-      </div>
-
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-art coxinha-art">
-            <img
-              class="produto-imagem"
-              src="assets/coxinha.jpeg"
-              alt="Coxinha dourada e crocante"
-              loading="lazy"
-            >
-          </div>
-          <div class="product-info">
-            <span class="product-number">01 / CLÁSSICO</span>
-            <h3>Mini coxinhas</h3>
-            <p>Crocantes por fora, cheias de sabor por dentro.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-art risole-art">
-            <img
-              class="produto-imagem"
-              src="assets/risoles.jpeg"
-              alt="Risole dourado em formato de meia-lua"
-              loading="lazy"
-            >
-          </div>
-          <div class="product-info">
-            <span class="product-number">02 / IRRESISTÍVEL</span>
-            <h3>Mini risoles</h3>
-            <p>Deliciosos risoles em formato meia-lua.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-art pastel-art">
-            <img
-              class="produto-imagem"
-              src="assets/pastelzinho.jpeg"
-              alt="Pastelzinho dourado e crocante"
-              loading="lazy"
-            >
-          </div>
-          <div class="product-info">
-            <span class="product-number">03 / CROCANTE</span>
-            <h3>Pastelzinhos</h3>
-            <p>Pequenos pastéis dourados para aproveitar cada mordida.</p>
-          </div>
-        </article>
-      </div>
+    <section class="catalog section hidden" id="catalogView">
+      <div class="section-heading"><div><span class="eyebrow">NOSSO ACERVO</span><h2>Encontre sua próxima leitura</h2><p>Pesquise por título, autor, gênero ou editora.</p></div><span class="count" id="bookCount">0 livros</span></div>
+      <div class="filters"><label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar livros..." autocomplete="off"></label><select id="genreFilter" aria-label="Filtrar por gênero"><option value="">Todos os gêneros</option></select><select id="availabilityFilter" aria-label="Filtrar disponibilidade"><option value="">Toda disponibilidade</option><option value="available">Disponíveis</option><option value="unavailable">Indisponíveis</option></select></div>
+      <div id="catalogMessage" class="notice hidden"></div>
+      <div class="book-grid" id="bookGrid"></div>
+      <div class="empty hidden" id="emptyState"><div class="empty-icon">⌕</div><h3>Nenhum livro encontrado</h3><p>Tente mudar os termos da pesquisa ou os filtros.</p></div>
     </section>
 
-    <section class="sizes-section" id="tamanhos">
-      <div class="section sizes-inner">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">O TAMANHO CERTO PARA VOCÊ</span>
-            <h2>Nossos tamanhos <em>e preços</em></h2>
-          </div>
-          <p>Escolha seu copo favorito e leve mais sabor para o seu momento.</p>
-        </div>
-
-        <div class="sizes-layout">
-          <div class="sizes-photo">
-            <img src="assets/tamanhos.jpeg" alt="Demonstração dos tamanhos dos copos de salgadinhos">
-          </div>
-
-          <div class="price-list">
-            <article class="price-card">
-              <div>
-                <span class="size-index">01</span>
-                <h3>Mini Big</h3>
-                <p>Pequeno no nome, grande na vontade.</p>
-              </div>
-              <strong>R$ 99,99</strong>
-            </article>
-
-            <article class="price-card featured">
-              <div>
-                <span class="size-index">02</span>
-                <h3>Big</h3>
-                <p>Para quem quer curtir mais sabor.</p>
-              </div>
-              <strong>R$ 99,99</strong>
-              <span class="popular">QUERIDINHO</span>
-            </article>
-
-            <article class="price-card">
-              <div>
-                <span class="size-index">03</span>
-                <h3>BigBig</h3>
-                <p>Uma dose extra de felicidade.</p>
-              </div>
-              <strong>R$ 99,99</strong>
-            </article>
-
-            <p class="temporary-note">* Valores provisórios, sujeitos a alteração.</p>
-          </div>
-        </div>
+    <section class="admin section hidden" id="adminView">
+      <div class="section-heading"><div><span class="eyebrow">ACESSO RESTRITO</span><h2>Área do responsável</h2><p>Gerencie o acervo e acompanhe os empréstimos.</p></div></div>
+      <div class="login-card" id="loginCard"><div class="login-symbol">⌑</div><h3>Entrar no painel</h3><p>Informe a senha de acesso do responsável.</p><form id="loginForm"><label for="adminPassword">Senha</label><input id="adminPassword" type="password" required autocomplete="current-password" placeholder="Digite sua senha"><button class="primary full" type="submit">Entrar</button><p class="form-error hidden" id="loginError"></p></form><small class="muted">O acesso é protegido pelo Firebase Authentication.</small></div>
+      <div id="adminPanel" class="hidden">
+        <div class="admin-toolbar"><div><h3>Gerenciar acervo</h3><p id="adminStatus" class="muted">Conectado ao Firebase</p></div><button class="secondary" id="logoutBtn">Sair</button></div>
+        <div class="admin-tabs"><button class="tab active" data-tab="books">Livros</button><button class="tab" data-tab="loans">Empréstimos</button></div>
+        <section id="booksTab">
+          <div class="admin-toolbar"><h3 id="bookFormTitle">Cadastrar livro</h3><button class="secondary hidden" id="cancelEditBtn">Cancelar edição</button></div>
+          <form id="bookForm" class="book-form">
+            <input type="hidden" id="editBookId">
+            <label>Título *<input id="title" required maxlength="180"></label>
+            <label>Autor *<input id="author" required maxlength="140"></label>
+            <label>Gênero<input id="genre" maxlength="80" placeholder="Ex.: Romance"></label>
+            <label>Editora<input id="publisher" maxlength="120"></label>
+            <label>Ano de publicação<input id="year" type="number" min="0" max="2100"></label>
+            <label>Páginas<input id="pages" type="number" min="1"></label>
+            <label>Idioma<input id="language" maxlength="50" value="Português"></label>
+            <label>ISBN<input id="isbn" maxlength="30"></label>
+            <label>Classificação<input id="classification" maxlength="50"></label>
+            <label>Edição<input id="edition" maxlength="50"></label>
+            <label>Coleção<input id="collection" maxlength="100"></label>
+            <label>Quantidade de exemplares *<input id="copies" type="number" min="1" value="1" required></label>
+            <label class="wide">URL da capa (opcional)<input id="coverUrl" type="url" placeholder="https://..."></label>
+            <label class="wide">Sinopse<textarea id="synopsis" rows="3" maxlength="3000"></textarea></label>
+            <label class="wide">Observações<textarea id="observations" rows="2" maxlength="1000"></textarea></label>
+            <div class="wide form-actions"><button class="primary" type="submit" id="saveBookBtn">Salvar livro</button><span class="muted" id="bookFormMessage"></span></div>
+          </form>
+          <div class="table-wrap"><table><thead><tr><th>Livro</th><th>Exemplares</th><th>Disponíveis</th><th>Ações</th></tr></thead><tbody id="adminBooksRows"></tbody></table></div>
+        </section>
+        <section id="loansTab" class="hidden">
+          <div class="admin-toolbar"><h3>Registrar empréstimo</h3></div>
+          <form id="loanForm" class="book-form">
+            <label>Livro *<select id="loanBook" required></select></label>
+            <label>Nome do leitor *<input id="borrower" required maxlength="140"></label>
+            <label>Identificação escolar (opcional)<input id="borrowerId" maxlength="80"></label>
+            <label>Data do empréstimo *<input id="loanDate" type="date" required></label>
+            <div class="wide form-actions"><button class="primary" type="submit">Registrar empréstimo (7 dias)</button><span class="muted" id="loanMessage"></span></div>
+          </form>
+          <div class="table-wrap"><table><thead><tr><th>Livro</th><th>Leitor</th><th>Retirada</th><th>Devolução prevista</th><th>Status</th><th>Ações</th></tr></thead><tbody id="loansRows"></tbody></table></div>
+        </section>
       </div>
-    </section>
-
-    <section class="section stock-section" id="estoque">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">ATUALIZADO PELO SISTEMA</span>
-          <h2>Nosso <em>estoque</em></h2>
-        </div>
-        <p>Acompanhe a quantidade disponível de cada delícia.</p>
-      </div>
-
-      <div class="stock-status" id="stock-status">
-        <span class="status-dot"></span>
-        <span>Conectando ao estoque...</span>
-      </div>
-
-      <div class="stock-grid">
-        <article class="stock-card">
-          <div class="stock-circle stock-coxinha">
-            <img
-              class="produto-imagem"
-              src="assets/coxinha.jpeg"
-              alt="Coxinha"
-              loading="lazy"
-            >
-          </div>
-          <h3>Coxinhas</h3>
-          <p class="stock-sub">Mini coxinhas</p>
-          <div class="stock-count" data-stock="coxinhas">— <small>unidades</small></div>
-        </article>
-
-        <article class="stock-card">
-          <div class="stock-circle stock-risole">
-            <img
-              class="produto-imagem"
-              src="assets/risoles.jpeg"
-              alt="Risole em formato de meia-lua"
-              loading="lazy"
-            >
-          </div>
-          <h3>Risoles</h3>
-          <p class="stock-sub">Formato meia-lua</p>
-          <div class="stock-count" data-stock="risoles">— <small>unidades</small></div>
-        </article>
-
-        <article class="stock-card">
-          <div class="stock-circle stock-pastel">
-            <img
-              class="produto-imagem"
-              src="assets/pastelzinho.jpeg"
-              alt="Pastelzinho"
-              loading="lazy"
-            >
-          </div>
-          <h3>Pastelzinhos</h3>
-          <p class="stock-sub">Mini pastéis</p>
-          <div class="stock-count" data-stock="pastelzinhos">— <small>unidades</small></div>
-        </article>
-      </div>
-
-      <p class="stock-updated" id="stock-updated">
-        As quantidades serão atualizadas quando a conexão estiver disponível.
-      </p>
-
-      <button class="refresh-button" id="refresh-stock">↻ Atualizar estoque</button>
     </section>
   </main>
 
-  <footer class="footer">
-    <a href="#inicio" class="footer-logo">
-      <img src="assets/logo.jpeg" alt="Culto Salgados">
-    </a>
+  <footer><div><strong>Biblioteca CEPK</strong><span>Colégio Estadual Presidente Kennedy</span></div><span>Um espaço para descobrir, aprender e imaginar.</span></footer>
 
-    <p class="footer-slogan">Mais sabor, mais momentos!</p>
-
-    <a class="footer-instagram" href="https://www.instagram.com/cultosalgados/" target="_blank" rel="noopener">
-      ◎ &nbsp; @cultosalgados ↗
-    </a>
-
-    <div class="footer-line"></div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Culto Salgados. Todos os direitos reservados.</span>
-      <a href="#inicio">Voltar ao topo ↑</a>
-    </div>
-  </footer>
-
-  <script type="module" src="app.js"></script>
+  <dialog id="bookDialog" class="book-dialog"><button class="dialog-close" id="closeDialog" aria-label="Fechar">×</button><div id="bookDetail"></div></dialog>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
